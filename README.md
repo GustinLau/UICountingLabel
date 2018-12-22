@@ -88,6 +88,11 @@ If you're using a `float` value, it's recommended to limit the number of digits 
 
 Because it uses the standard `stringWithFormat:` method, you can also include arbitrary text in your format, such as `@"Points: %i"`.
 
+## PositiveFormat #####
+If you want to add a thousands separator, you can set the `positiveFormat` property like `,###`, or if you want to keep two decimal places and add a thousands separator, you can set the `positiveFormat` property like `,###.00`
+
+If you're using `prositiveFormat` the `format` property will be ignored.
+
 ## Modes #####
 There are currently four modes of counting.
 
@@ -103,7 +108,6 @@ Ease Out starts out fast and slows down as it gets to the destination value.
 ### `UILabelCountingMethodEaseInOut` #####
 Ease In/Out starts out slow, speeds up towards the middle, and then slows down as it approaches the destination.  It is a nice, smooth curve that looks great, and is the default method.
 
-----
 # 以下是中文教程
 -----
 为 `UILabel` 添加计数动画支持.
@@ -194,6 +198,12 @@ UICountingLabel 可以使用cocoaPods导入,
 假如你需要以`float`类型展示, 最好设置小数点位数限制, 例如使用`@"%.1f"`来限制只显示一位小数.
 
 因为使用了标准的`stringWithFormat:`方法, 可以按照自己的意愿自定义格式,例如:`@"Points: %i"`.
+
+## 高级格式 #####
+
+如果你想添加千分号，你可以将`positiveFormat`设置为`,###`，或者如果你想添加千分号并且保留两位小数，你可以将将`positiveFormat`设置为`,###.00`
+
+如果你使用了`prositiveFormat`，`format`属性将会被忽略
 
 ## 动画类型 #####
 当前有四种技术动画样式.
